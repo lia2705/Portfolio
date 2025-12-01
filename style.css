@@ -116,6 +116,8 @@ h2 {
   line-height: 1.5;
   color: #ffffff;
   font-size: 20px;
+  word-spacing: 2px;
+  letter-spacing: 0.5px;
 }
 
 /* Responsive: stack vertically on narrow viewports */
