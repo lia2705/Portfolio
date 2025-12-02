@@ -47,7 +47,7 @@ h4 {
 p{
     font-family: "Lisu Bosa", sans-serif;
     margin: 0;
-    font-size: 1vw;
+    font-size: 1.5vw;
 }
 
 /* --- HEADER --- */
@@ -212,29 +212,12 @@ p{
 
 /* Der Haupt-Container für den Hintergrund (Graue Leiste) */
 .main-footer {
-    padding: 20px 0; /* Vertikaler Abstand oben und unten */
+    padding: 2vw 0; /* Vertikaler Abstand oben und unten */
     color: #ffffff; /* Weiße Schrift für den Haupttext */
     position: relative;
     /* Optional: Um die bunten Formen oben zu positionieren */
     margin-top: 200px;
 }
-
-/* Der innere Container, der die Breite begrenzt und die Elemente ausrichtet */
-.footer-container {
-    max-width: 1200px; /* Begrenzt die maximale Breite des Inhalts */
-    margin: 0 auto; /* Zentriert den Container */
-    padding: 0 40px; /* Horizontaler Abstand zu den Rändern */
-    display: flex;
-    /* Verteilt den freien Raum zwischen den drei Elementen */
-    justify-content: space-between;
-    /* Richtet alle Elemente vertikal in der Mitte aus */
-    align-items: center; 
-    position: relative;
-    width: auto;
-    z-index: 20; /* Stellt sicher, dass der Text über den Formen liegt */
-}
-
-/* --- DEKORATIVE FORMEN (NACH DEM SCREENSHOT) --- */
 
 .decorative-shapes {
     position: absolute;
@@ -252,7 +235,7 @@ p{
 .decorative-shapes > div {
     /* base layout for shapes — children can override width/height */
     width: calc(100% / 3);
-    height: 100px; /* adjust as needed */
+    height: 10vw; /* adjust as needed */
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -265,14 +248,19 @@ p{
     height: 150px;
     border-radius: 40px 40px 0 0; /* top-left top-right bottom-right bottom-left */
     align-self: flex-end;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.pink-shape p{
+    margin-bottom: 20px;
 }
 
 .lime-shape {
     background-color: #C7E15F;
     display: flex;
-    /* 2. Center content horizontally */
     justify-content: center; 
-    /* 3. Center content vertically */
     align-items: center;
 }
 
@@ -286,4 +274,11 @@ p{
     height: 150px;
     border-radius: 40px 40px 0 0; /* top-left top-right bottom-right bottom-left */
     align-self: flex-end;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.blue-shape p{
+    margin-bottom: 20px;
 }
