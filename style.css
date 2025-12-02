@@ -47,7 +47,7 @@ h4 {
 p{
     font-family: "Lisu Bosa", sans-serif;
     margin: 0;
-    font-size: 20px;
+    font-size: 2vw;
 }
 
 /* --- HEADER --- */
@@ -230,6 +230,7 @@ p{
     /* Richtet alle Elemente vertikal in der Mitte aus */
     align-items: center; 
     position: relative;
+    width: auto;
     z-index: 20; /* Stellt sicher, dass der Text über den Formen liegt */
 }
 
@@ -268,6 +269,15 @@ p{
 
 .lime-shape {
     background-color: #C7E15F;
+    display: flex;
+    /* 2. Center content horizontally */
+    justify-content: center; 
+    /* 3. Center content vertically */
+    align-items: center;
+}
+
+.lime-shape p{
+    margin-bottom: 20px;
 }
 
 .blue-shape {
