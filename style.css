@@ -32,10 +32,22 @@ h3 {
     font-size: 6vw;
     font-weight: 800;
     line-height: 0.9;
-    letter-spacing: -8px; 
+    letter-spacing: -10%; 
     word-spacing: 5px;
     font-variation-settings: "opsz" 36;
     margin-bottom: 0;
+}
+
+h4 {
+    font-family: "Archivo Narrow", sans-serif;
+    font-size: 1.5vw;
+    margin: 0px;
+}
+
+p{
+    font-family: "Lisu Bosa", sans-serif;
+    margin: 0;
+    font-size: 20px;
 }
 
 /* --- HEADER --- */
@@ -113,7 +125,6 @@ h3 {
   margin: 0;
   line-height: 1.5;
   color: #ffffff;
-  font-size: 20px;
   word-spacing: 2px;
   letter-spacing: 0.5px;
 }
@@ -142,39 +153,127 @@ h3 {
 }
 
 .projects-title {
-    /*font-size: 55px;
-    font-weight: 800;
     margin-bottom: 40px;
-    border-top: 10px solid #ccff5e;
+    border-top: 10px solid #C7E15F;
     display: inline-block;
-    padding-top: 20px;*/
+    padding-top: 20px;
 }
 
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 5px;
+}
+
+.project-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.project-card-row {
+    grid-column: 1 / -1;
+    height: 300px;
+}
+
+.side-project {
+    height: 150px;
+    margin-bottom: 5px;
 }
 
 .project-card img {
+    position: absolute;
+    inset: 0;
     width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 50%;
+    display: block;
+    z-index: 1;
 }
 
-/* --- RESPONSIVE --- */
-@media(max-width: 900px) {
-    .about-section {
-        flex-direction: column;
-        text-align: center;
-    }
+.project-info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.45) 60%, rgba(0,0,0,0.7) 100%);
+    color: #ffffff;
+    text-align: left;
+}
 
-    .star {
-        left: 180px;
-        top: 20px;
-    }
+/* --- FOOTER STYLES --- */
 
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
+/* Der Haupt-Container für den Hintergrund (Graue Leiste) */
+.main-footer {
+    padding: 20px 0; /* Vertikaler Abstand oben und unten */
+    color: #ffffff; /* Weiße Schrift für den Haupttext */
+    position: relative;
+    /* Optional: Um die bunten Formen oben zu positionieren */
+    margin-top: 200px;
+}
+
+/* Der innere Container, der die Breite begrenzt und die Elemente ausrichtet */
+.footer-container {
+    max-width: 1200px; /* Begrenzt die maximale Breite des Inhalts */
+    margin: 0 auto; /* Zentriert den Container */
+    padding: 0 40px; /* Horizontaler Abstand zu den Rändern */
+    display: flex;
+    /* Verteilt den freien Raum zwischen den drei Elementen */
+    justify-content: space-between;
+    /* Richtet alle Elemente vertikal in der Mitte aus */
+    align-items: center; 
+    position: relative;
+    z-index: 20; /* Stellt sicher, dass der Text über den Formen liegt */
+}
+
+/* --- DEKORATIVE FORMEN (NACH DEM SCREENSHOT) --- */
+
+.decorative-shapes {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 10;
+    gap: 5px;
+    overflow: visible; /* allow shapes to extend outside the footer */
+}
+
+.decorative-shapes > div {
+    /* base layout for shapes — children can override width/height */
+    width: calc(100% / 3);
+    height: 100px; /* adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* Pink: square with the upper two corners rounded off */
+.pink-shape {
+    background-color: #F178B6;
+    width: 150px;
+    height: 150px;
+    border-radius: 40px 40px 0 0; /* top-left top-right bottom-right bottom-left */
+    align-self: flex-end;
+}
+
+.lime-shape {
+    background-color: #C7E15F;
+}
+
+.blue-shape {
+    background-color: #5D5FEF;
+    width: 150px;
+    height: 150px;
+    border-radius: 40px 40px 0 0; /* top-left top-right bottom-right bottom-left */
+    align-self: flex-end;
 }
