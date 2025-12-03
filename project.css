@@ -1,0 +1,309 @@
+/* --- GENERAL --- */
+
+header {
+    background-color: #C93063;
+    margin-top: 0;
+}
+
+body {
+    margin: 0;
+    /*font-family: "Helvetica Neue", sans-serif;*/
+    color: #222;
+    
+}
+
+h1 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 15vw;
+    font-weight: 800;
+    line-height: 0.9;
+    letter-spacing: -8%; 
+    font-variation-settings: "opsz" 36;
+    margin: 0;
+}
+
+h2 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 7.7vw;
+    font-weight: 800;
+    line-height: 0.9;
+    letter-spacing: -10%;
+    word-spacing: 5px; 
+    font-variation-settings: "opsz" 36;
+    margin: 0px;
+}
+
+h3 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 6vw;
+    font-weight: 800;
+    line-height: 0.9;
+    letter-spacing: -10%; 
+    word-spacing: 5px;
+    font-variation-settings: "opsz" 36;
+    margin: 0;
+}
+
+h4 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 4vw;
+    font-weight: 500;
+    line-height: 0.9;
+    letter-spacing: -10%; 
+    word-spacing: 5px;
+    font-variation-settings: "opsz" 36;
+    margin: 0;
+}
+
+p{
+    font-family: "Lisu Bosa", sans-serif;
+    margin: 0;
+    font-size: 1.5vw;
+}
+
+a{
+    font-family: "Lisu Bosa", sans-serif;
+    margin: 0;
+    font-size: 1.5vw;
+}
+
+/* --- SHORT INFO --- */
+
+.project-name {
+    /*padding: 60px, 0px, 20px, 0px;*/
+    position: relative;
+    height: auto;
+    padding-left: 2vw;
+    padding-bottom: 2vw;
+    padding-top: 8vw;
+    color: #E0B72F;
+}
+
+.shortinfo-text{
+    display: flex;
+    flex-direction: row;
+    gap: 150px;
+    padding: 2vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin-top: 2vw;
+}
+
+.shortinfo-right p {
+    line-height: 30px;
+}
+
+.shortinfo-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    height: 300px;
+    margin-bottom: 40px;
+}
+
+.shortinfo-image img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 50%;
+    display: block;
+    z-index: 1;
+}
+
+.project-infos-grid{
+    padding: 5vw;
+    padding-top: 2vw;
+    gap: 5vw;
+}
+
+.step{
+    display: flex;
+    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: stretch;
+    padding: 20px;
+    margin-bottom: 50px;
+    border-bottom: 5px solid #000000;
+    border-top: 5px solid #000000;
+}
+
+.step1{
+   border-color: #E0B72F;
+}
+.stage1{
+    color: #E0B72F;
+}
+
+.step2{
+    border-color: #C93063;
+}
+.stage2{
+    color: #C93063;
+    justify-self: end;   /* place the grid item to the right of its column */
+    text-align: right;   /* align text inside the item to the right edge */
+    width: 100%;
+}
+
+
+.step3{
+    border-bottom: 5px solid;
+    border-top: 5px solid;
+    border-color: #E0B72F;
+    padding: 20px;
+}
+.step3 h2{
+    color: #E0B72F;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.stage3{
+    display: flex;
+    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: stretch;
+    padding: 20px;
+    gap: 20px;
+    
+}
+.stage3 p{
+    margin-top: 60px;
+}
+.stage3 h4{
+    color:#E0B72F;
+}
+.stage3 img{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 50%;
+    display: block;
+    z-index: 1;
+}
+.sitemap-image{
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    height: 300px;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    border: 1px solid #E0B72F;
+    max-height:100%; max-width:100%;
+}
+.stage3-fullscreen {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.stage3-fullscreen-text {
+    grid-column: 1 / -1; 
+    margin-top: 20px;
+}
+.paper-image {
+    position: relative;
+    width: 200%;
+    height: 300px;
+    margin: 10px; 
+    padding-bottom: 50px;
+    border: 1px solid #E0B72F;
+}
+.paper-image img{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 50%;
+    display: block;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+/* --- FOOTER STYLES --- */
+
+/* Der Haupt-Container für den Hintergrund (Graue Leiste) */
+.main-footer {
+    padding: 2vw 0; /* Vertikaler Abstand oben und unten */
+    color: #ffffff; /* Weiße Schrift für den Haupttext */
+    position: relative;
+    /* Optional: Um die bunten Formen oben zu positionieren */
+    margin-top: 200px;
+}
+
+.decorative-shapes {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 10;
+    gap: 5px;
+    overflow: visible; /* allow shapes to extend outside the footer */
+}
+
+.decorative-shapes > div {
+    /* base layout for shapes — children can override width/height */
+    width: calc(100% / 3);
+    height: 10vw; /* adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* Pink: square with the upper two corners rounded off */
+.pink-shape {
+    background-color: #F178B6;
+    width: 150px;
+    height: 150px;
+    border-radius: 40px 40px 0 0; /* top-left top-right bottom-right bottom-left */
+    align-self: flex-end;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.pink-shape p{
+    margin-bottom: 4vw;
+}
+
+.lime-shape {
+    background-color: #C7E15F;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.lime-shape p{
+    margin-bottom: 4vw;
+}
+
+.blue-shape {
+    background-color: #5D5FEF;
+    width: 150px;
+    height: 150px;
+    border-radius: 40px 40px 0 0; /* top-left top-right bottom-right bottom-left */
+    align-self: flex-end;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.blue-shape p{
+    margin-bottom: 4vw;
+}
