@@ -1,0 +1,119 @@
+/* -- GENERAL --*/
+
+h1{
+    font-size: 12vw;
+}
+
+header{
+    background-color: #C7E15F;
+}
+
+.project-name {
+    color: #5D5FEF;
+}
+
+.project-infos-grid{
+    padding: 5vw;
+    padding-top: 2vw;
+    gap: 5vw;
+}
+
+
+img {
+  width: 100%;
+  margin-bottom: 1em;
+  border-radius: 7px;
+}
+
+.list {
+  columns: auto;
+  column-width: 300px;
+  gap: 2vw;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden; /* prevent horizontal scroll */
+}
+
+.list img {
+  max-height: 400px;
+  width: 100%;
+  margin-bottom: 1em;
+  border-radius: 7px;
+  break-inside: avoid; /* prevent image from breaking across columns */
+}
+
+
+/* --- FOOTER STYLES --- */
+
+/* Der Haupt-Container für den Hintergrund (Graue Leiste) */
+.main-footer {
+    padding: 2vw 0; /* Vertikaler Abstand oben und unten */
+    color: #ffffff; /* Weiße Schrift für den Haupttext */
+    position: relative;
+    /* Optional: Um die bunten Formen oben zu positionieren */
+    margin-top: 200px;
+}
+
+.decorative-shapes {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 10;
+    gap: 5px;
+    overflow: visible; /* allow shapes to extend outside the footer */
+}
+
+.decorative-shapes > div {
+    /* base layout for shapes — children can override width/height */
+    width: calc(100% / 3);
+    height: 10vw; /* adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* Pink: square with the upper two corners rounded off */
+.pink-shape {
+    background-color: #F178B6;
+    width: 150px;
+    height: 150px;
+    border-radius: 40px 40px 0 0; /* top-left top-right bottom-right bottom-left */
+    align-self: flex-end;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.pink-shape p{
+    margin-bottom: 4vw;
+}
+
+.lime-shape {
+    background-color: #C7E15F;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.lime-shape p{
+    margin-bottom: 4vw;
+}
+
+.blue-shape {
+    background-color: #5D5FEF;
+    width: 150px;
+    height: 150px;
+    border-radius: 40px 40px 0 0; /* top-left top-right bottom-right bottom-left */
+    align-self: flex-end;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.blue-shape p{
+    margin-bottom: 4vw;
+}

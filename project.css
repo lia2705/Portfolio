@@ -1,3 +1,13 @@
+/* 
+---
+---
+GENERAL CSS FILE FOR THE PROJECT PAGES (based on project 01)
+(others are just specifiy pages for projects 02 and further)
+---
+---
+*/
+
+
 /* --- GENERAL --- */
 
 header {
@@ -8,8 +18,8 @@ header {
 body {
     margin: 0;
     /*font-family: "Helvetica Neue", sans-serif;*/
-    color: #222;
-    
+    background-color: #ffffff;
+    color:#000000;
 }
 
 h1 {
@@ -91,6 +101,10 @@ a{
 
 .shortinfo-right p {
     line-height: 30px;
+}
+
+.shortinfo-left {
+    width: 100vw;
 }
 
 .shortinfo-image {
@@ -223,14 +237,6 @@ a{
     display: block;
     z-index: 1;
 }
-
-
-
-
-
-
-
-
 
 
 /* --- FOOTER STYLES --- */

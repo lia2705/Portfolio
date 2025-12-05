@@ -170,6 +170,7 @@ p{
     width: 100%;
     aspect-ratio: 16 / 9;
     overflow: hidden;
+    height: 100%;
 }
 
 .project-card-row {
@@ -184,11 +185,11 @@ p{
 
 .project-card img {
     position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
+    inset: -1px; /* um linie zu entfernen, nächste 2 zeilen genauso, vergrößert bild um ein bisschen */
+    width: calc(100% + 2px);;
+    height: calc(100% + 2px);;
     object-fit: cover;
-    object-position: 0 50%;
+    object-position: center;
     display: block;
     z-index: 1;
 }
@@ -207,6 +208,7 @@ p{
     color: #ffffff;
     text-align: left;
 }
+
 
 /* --- FOOTER STYLES --- */
 
