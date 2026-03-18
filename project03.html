@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lia Portfolio</title>
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="project03.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lisu+Bosa:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="project-name">
+        <div class="project-name-container">
+            <h1 class="name">
+                XR Interaction in <br> automotive design
+            </h1>
+        </div>
+    </header>
+
+    <!-- SHORT INFO -->
+    <section class="project-shortinfo">
+        <div class="shortinfo-text">
+            <div class ="shortinfo-left">
+                <p><b>Role:</b> SOTA analysis, gesture concept, user study concept, user tests <br><br>
+                <b>Tools:</b> Unity, Varjo XR3,  Miro <br><br>
+                <b>Team:</b> Group Project
+                </p>
+            </div>
+            <div class ="shortinfo-right">
+                <p>This project explores how hand and foot gestures can be combined to interact 
+                    with 3D models in a virtual autonomous car environment. 
+                    It investigates the usability of newly designed foot-based interactions
+                    and compares them to established hand gestures through a structured user study. 
+                    The results show that foot gestures work well for larger, more dynamic actions, 
+                    while hand gestures remain preferred for precise control. Overall, the project 
+                    demonstrates the potential of multimodal VR interaction and highlights areas for 
+                    further improvement in gesture design.
+                </p>
+            </div>
+        </div>
+        <div class="shortinfo-image">
+            <img src="pictures/XR-Acessibility/short-picture.png">
+        </div>
+    </section>
+
+    <section class="project-detailinfo">
+        <div class="project-infos-grid">
+
+            <!-- STEP 1 -->
+            <div class="step step1">
+                <div class="stage1">
+                    <h1>01 </h1>
+                    <h4>Problem Statement</h4>
+                </div>
+
+                <p>
+                    Hand gestures are well-established in VR, but they can be limiting in terms of comfort and accessibility. The project explored whether foot gestures could serve as an additional interaction method for controlling a 3D model. 
+                    The challenge was to determine whether foot gestures could support actions like rotating, zooming, and moving a 3D model inside a virtual autonomous car environment, and how their usability compares to established hand-based controls.
+                    The project aimed to design an intuitive set of foot gestures, integrate them into a VR prototype, and compare their usability to hand gestures using quantitative and qualitative feedback collected in user tests.
+                </p>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="step step2 stage2">
+                <p> 
+                A state-of-the-art analysis highlighted key principles for designing foot gestures: larger movements are more reliably detected, gestures inspired by hand interactions feel intuitive, and subtle 
+                motions—such as foot shaking—are not practical. 
+                Personas and user stories guided the interaction context and accessibility needs. Several gesture concepts were explored and refined through internal testing, leading to a selected set of gestures for zooming, 
+                rotation, and movement. An activation mechanism (lifting toes) and color-coded foot feedback were introduced to improve clarity and prevent accidental activation.
+                </p>
+                <div class="stage2">
+                    <h1>02 </h1>
+                    <h4>Research & Concept development</h4>
+                </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="stage3">
+                <div>
+                    <div class="stage3-name">
+                        <h1>03</h1>
+                        <h4>Prototype & user study</h4>
+                    </div>
+                    <div class="stage3-split">
+                        <div>
+                            <p>The foot gestures were integrated into a VR prototype built on an existing hand-gesture system. A technical challenge arose from reflective surfaces interfering with the foot sensors, causing inaccurate tracking; the environment was adjusted to reduce reflections, partially improving responsiveness.
+                            A pre-test revealed the need for gesture adjustments, a legend, a calibrate button, and additional qualitative questions.
+                            The main study involved 12 participants who tested three modes, hand, foot, and combined gestures and completed SUS questionnaires after each gesture set. 
+                            Observations showed that users preferred foot rotation, hand-based zooming, and a mixed-gesture workflow. Additional feedback was collected from 19 Media Night visitors, many of whom affirmed interest in foot-gesture interaction but noted a learning curve.
+                            </p>
+                        </div>
+                        <div class="split-image">
+                            <img src="pictures/XR-Acessibility/prototype.png" alt="Sitemap">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 4 -->
+            <div class="step4">
+                <h1>04</h1>
+                <h4>Summary</h4>
+            </div>
+            <div class="stage4">
+                <p> → Promising innovation, by diversifying interaction modalities. Beneficial for certain tasks, but less effective for others. 
+                    <br><br>
+                    → Combining hand and foot gestures is preferred, hands used for actions that require precision, foot gestures for actions that   benefit from larger movements
+                    <br><br>
+                    → Issues such as gesture discomfort, occasional misrecognition, and the learning curve associated with foot gestures suggest that improvements are necessary for broader adoption. 
+                    <br><br>
+                    → Future research should focus on optimizing gesture recognition algorithms, enhancing the responsiveness of foot-based controls, and incorporating more intuitive and distinct gesture mappings.
+                </p>
+            </div>
+    </section>
+
+    <!-- BOTTOM NAVIGATION -->
+    <nav class="bottom-nav">
+        <a href="project02.html">Previous project</a>
+        <span>•</span>
+        <a href="project04.html">Next project</a>
+    </nav>
+
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+    <div class="decorative-shapes">
+        <div class="pink-shape">
+            <p>© 2025</p>
+        </div>
+        <div class="lime-shape">
+            <p>Thanks for stopping by :)</p>
+        </div>
+        <div class="blue-shape">
+            <p>Efthalia Vogiari</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

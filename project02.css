@@ -1,0 +1,158 @@
+/* -- GENERAL --*/
+
+header{
+    background-color: #C7E15F;
+}
+
+h1{
+  color: #5D5FEF;
+}
+
+.project-name {
+    color: #5D5FEF;
+}
+
+.shortinfo-image{
+    background-color: #C7E15F !important;
+}
+
+.shortinfo-image img{
+   margin: auto;
+   scale: 1;
+   border-radius: 0px;
+}
+
+.project-infos-grid{
+    padding: 5vw;
+    padding-top: 2vw;
+    gap: 5vw;
+}
+
+img {
+  width: 100%;
+  margin-bottom: 1em;
+  border-radius: 7px;
+}
+
+/* --- PICTURE GRID --- */
+
+.cs-grid {
+  display: grid;
+  width: 100%;
+  max-width: 1600px;
+  grid-template-columns: 18fr 14fr 23fr 26fr 17fr;
+  grid-template-rows: 280px 280px;
+  gap: 5px;
+  margin-bottom: 70px;
+}
+
+.cs-grid .cell {
+  overflow: hidden;
+}
+
+.cs-grid .cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+}
+
+/* Col 1 | Row 1 */
+.cell-street   { grid-column: 1; grid-row: 1; }
+
+/* Col 2 | Row 1 — zwei Bilder übereinander */
+.cell-stack {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cell-stack .sub          { flex: 1; overflow: hidden;}
+.cell-stack .sub img      { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 0; }
+
+/* Col 3 | Rows 1–2 — Poster volle Höhe */
+.cell-poster   { grid-column: 3; grid-row: 1 / 3; }
+
+/* Col 4 | Row 1 */
+.cell-desk     { grid-column: 4; grid-row: 1; }
+
+/* Col 5 | Row 1 */
+.cell-door     { grid-column: 5; grid-row: 1; }
+
+/* Cols 1–2 | Row 2 — breites Interior */
+.cell-interior { grid-column: 1 / 3; grid-row: 2; }
+
+/* Col 4 | Row 2 */
+.cell-coffins  { grid-column: 4; grid-row: 2; }
+
+/* Col 5 | Row 2 */
+.cell-bedroom  { grid-column: 5; grid-row: 2; }
+
+.bottom-nav a:hover {
+    color: #5D5FEF;
+}
+
+/* --- RESPONSIVE DESIGN ---*/  
+
+@media (max-width: 768px) {
+  h1{
+     font-size: clamp(2.5rem, 50vw, 7rem);
+  }
+
+  .shortinfo-image img{
+    scale: 2;
+  }
+
+  .cs-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 5px;
+  }
+
+  /* Alle expliziten Platzierungen zurücksetzen */
+  .cell-street,
+  .cell-desk,
+  .cell-door,
+  .cell-interior,
+  .cell-coffins,
+  .cell-bedroom,
+  .cell-poster {
+    grid-column: auto;
+    grid-row: auto;
+    height: 180px;
+  }
+
+  .cell-bedroom {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    height: 180px;
+  }
+
+  /* cell-stack "auflösen" — die zwei Sub-Bilder 
+     werden direkte Grid-Kinder */
+  .cell-stack {
+    display: contents;
+  }
+
+  .cell-stack .sub {
+    overflow: hidden;
+    background: #1a1a1a;
+    height: 180px;
+    border-radius: 0 !important;
+  }
+
+  .cell-stack .sub img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 0 !important;
+  }
+
+
+}
+
+

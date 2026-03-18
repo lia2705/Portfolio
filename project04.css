@@ -1,0 +1,91 @@
+/* -- GENERAL --*/
+
+h1{
+    color: #5D5FEF;
+}
+
+
+h3{
+    color: #5D5FEF;
+}
+
+h4{
+    color: #5D5FEF;
+}
+
+header{
+    background-color: #dfb82e;
+}
+
+.name{
+    font-size: 9vw;
+}
+
+.project-infos-grid{
+    padding: 5vw;
+    gap: 5vw;
+}
+
+.stage2 {
+    text-align: right;
+}
+
+.shortinfo-image{
+    background-color: #dfb82e;
+}
+
+.shortinfo-image img{
+    margin: auto;
+    scale: 0.7;
+}
+
+.split-image{
+    border-color: #F178B6;
+    height: 100%;
+    object-fit: fit;
+}
+
+.step3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+.step3-image {
+    width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+}
+
+.step3-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.bottom-nav a:hover {
+    color: #5D5FEF;
+}
+
+@media (max-width: 768px){
+
+.shortinfo-image img{
+    scale: 1;
+}
+
+.stage2 {
+    text-align: left;
+}
+
+.step3{
+    flex-direction: column;
+    gap: 0px;
+    align-items: flex-start;
+    margin: 0;
+}
+    
+}
+

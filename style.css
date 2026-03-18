@@ -1,0 +1,438 @@
+/* --- GENERAL --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #222;
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: clamp(4rem, 15vw, 11rem);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -8%;
+  color: #5d63ff;
+  font-variation-settings: "opsz" 36;
+  margin: 0;
+}
+
+h2 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -8%;
+  word-spacing: 5px;
+  font-variation-settings: "opsz" 36;
+  margin: 0;
+}
+
+h3 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 800;
+  line-height: 0.9;
+  word-spacing: 5px;
+  letter-spacing: -8%;
+  font-variation-settings: "opsz" 36;
+  margin: 0 0 40px 0;
+}
+
+h4 {
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: clamp(0.95rem, 1.5vw, 1.3rem);
+  margin: 0;
+}
+
+p {
+  font-family: "Canva Sans", sans-serif;
+  margin: 0;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+
+/* --- HEADER --- */
+.name-header {
+  background: #ffffff;
+  position: relative;
+  height: auto;
+  z-index: 10;
+  padding: 2rem 1.5rem 1rem 1.5rem;
+}
+
+.name-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  height: auto;
+}
+
+.star {
+  margin-top: 13%;
+  width: clamp(36px, 8vw, 100px);
+  height: auto;
+}
+
+/* --- ABOUT SECTION --- */
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.about-left,
+.about-right {
+  flex: 1 1 320px;
+  min-width: 0;
+  padding: 2rem;
+}
+
+.about-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #C93063;
+  position: relative;
+}
+
+.about-right {
+  background-color: #F178B6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image {
+  position: relative;
+  width: min(75vw, 420px);
+}
+
+.about-image img {
+  margin-top: 1vw;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-image h2 {
+  color: #F178B6;
+  position: absolute;
+  left: 30%;
+  top: 80%;
+  z-index: 5;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  text-align: left;
+  font-size: 80px;
+  line-height: 0.95;
+}
+
+.about-text {
+  width: 100%;
+  max-width: 100%;
+}
+
+.about-text p {
+  line-height: 1.6;
+  color: #ffffff;
+  word-spacing: 2px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  font-size: clamp(1rem, 2.3vw, 1.4rem);
+  overflow-wrap: break-word;
+}
+
+/* --- PROJECT SECTION --- */
+.projects {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.projects-title {
+  border-top: 10px solid #C7E15F;
+  display: inline-block;
+  padding-top: 20px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px;
+  margin: 0 30px 40px 30px; 
+}
+
+.projects-grid a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  min-width: 0;
+}
+
+.project-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  height: 100%;
+}
+
+/*Hover effect for project cards*/
+.project-hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--overlay-color, black);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  text-align: center;
+  z-index: 3;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-hover-overlay {
+  transform: scaleY(1);
+}
+
+.card-pink { --overlay-color: #c93063; }
+.card-lime { --overlay-color: #C7E15F; }
+.card-purple { --overlay-color: #5d63ff; }
+.card-yellow { --overlay-color: #dfb82e; }
+.card-light-pink { --overlay-color: #fe85fe; }
+
+.full-width-card {
+  grid-column: 1 / -1;
+  display: block;          /* already in your .projects-grid a rule */
+}
+
+.project-card-row {
+ grid-column: 1 / -1; 
+  height: 300px;
+}
+
+.side-project {
+  height: 150px;
+}
+
+.project-card img {
+  position: absolute;
+  inset: -1px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+.project-info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.45) 60%, rgba(0,0,0,0.7) 100%);
+  color: #ffffff;
+  text-align: left;
+}
+
+.project-info h4 {
+  font-size: clamp(0.95rem, 1.5vw, 1.3rem);
+}
+
+.project-info p,
+.project-hover-overlay p {
+  font-size: clamp(0.95rem, 1.3vw, 1.15rem);
+}
+
+/* --- FOOTER --- */
+.main-footer {
+  padding: 2vw 0;
+  color: #ffffff;
+  position: relative;
+  margin-top: 200px;
+}
+
+.decorative-shapes {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 10;
+  gap: 5px;
+  overflow: visible;
+}
+
+.decorative-shapes > div {
+  width: calc(100% / 3);
+  height: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.pink-shape {
+  background-color: #F178B6;
+  width: 150px;
+  height: 150px;
+  border-radius: 40px 40px 0 0;
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pink-shape p {
+  margin-bottom: 4vw;
+}
+
+.lime-shape {
+  background-color: #C7E15F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lime-shape p {
+  margin-bottom: 4vw;
+}
+
+.blue-shape {
+  background-color: #5D5FEF;
+  width: 150px;
+  height: 150px;
+  border-radius: 40px 40px 0 0;
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blue-shape p {
+  margin-bottom: 4vw;
+}
+
+/* --- RESPONSIVE DESIGN FOR MOBILE --- */
+@media (max-width: 700px) {
+  .name-header {
+    padding: 1.5rem 1rem 1rem 1rem;
+  }
+
+  .name-container {
+    gap: 14px;
+  }
+
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-left,
+  .about-right {
+    padding: 1.25rem;
+  }
+
+  .about-left {
+    align-items: flex-start;
+  }
+
+  .about-image {
+    width: min(70vw, 300px);
+  }
+
+  .about-image img {
+    width: 100%;
+  }
+
+  .about-image h2 {
+  left: 8%;
+  top: 78%;
+  right: auto;
+  width: auto;
+  max-width: none;
+  white-space: nowrap;
+  text-align: left;
+  font-size: clamp(2.2rem, 8.6vw, 3.8rem);
+  line-height: 1;
+}
+
+
+  .about-text p {
+    font-size: clamp(1rem, 4.5vw, 1.2rem);
+    text-align: left;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    margin: 0 20px 30px 20px;
+  }
+
+  .project-card {
+    height: 200px;
+  }
+
+  .project-card-row {
+    grid-column: auto;
+    height: 200px;
+  }
+
+  .side-project {
+    height: 150px;
+  }
+
+  .project-info h4 {
+    font-size: clamp(0.9rem, 3.6vw, 1rem);
+  }
+
+  .project-info p {
+    font-size: clamp(0.9rem, 3.4vw, 1rem);
+  }
+
+  .project-hover-overlay p {
+    font-size: clamp(0.9rem, 3.4vw, 1rem);
+  }
+
+  .main-footer {
+    margin-top: 140px;
+  }
+
+  .pink-shape,
+  .blue-shape {
+    width: 110px;
+    height: 110px;
+    border-radius: 28px 28px 0 0;
+  }
+}
