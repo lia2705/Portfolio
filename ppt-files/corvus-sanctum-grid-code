@@ -1,0 +1,162 @@
+
+CORVUS SANCTUM GRID
+HTML
+
+<div class="cs-grid">
+        <!-- Col 1 | Row 1 -->
+        <div class="cell cell-street">
+            <img src="pictures/Corvus Sanctum/corridor.png" alt="Corridor" />
+        </div>
+
+        <!-- Col 2 | Row 1: Distillation (oben) + Notebooks (unten) -->
+        <div class="cell-stack">
+            <div class="sub">
+            <img src="pictures/Corvus Sanctum/lab-render.png" alt="Distillation Equipment" />
+            </div>
+            <div class="sub">
+            <img src="pictures/Corvus Sanctum/book-render.png" alt="Notebooks" />
+            </div>
+        </div>
+
+        <!-- Col 3 | Rows 1–2: Hauptposter -->
+        <div class="cell cell-poster">
+            <img src="pictures/Corvus Sanctum/poster.png" alt="Corvus Sanctum Poster" />
+        </div>
+
+        <!-- Col 4 | Row 1 -->
+        <div class="cell cell-desk">
+            <img src="pictures/Corvus Sanctum/office-room.png" alt="Office Room" />
+        </div>
+
+        <!-- Col 5 | Row 1  -->
+        <div class="cell cell-door">
+            <img src="pictures/Corvus Sanctum/door-render.png" alt="Door" />
+        </div>
+
+        <!-- Cols 1–2 | Row 2 (breit) -->
+        <div class="cell cell-interior">
+            <img src="pictures/Corvus Sanctum/coffin-room.png" alt="CoffinRoom" />
+        </div>
+
+        <!-- Col 4 | Row 2 -->
+        <div class="cell cell-coffins">
+            <img src="pictures/Corvus Sanctum/coffin-render.png" alt="Coffins" />
+        </div>
+
+        <!-- Col 5 | Row 2 -->
+        <div class="cell cell-bedroom">
+            <img src="pictures/Corvus Sanctum/morgue-room.png" alt="Morgue Room" />
+        </div>
+    </div>
+    </section>
+
+
+CSS
+
+/* --- PICTURE GRID --- */
+
+.cs-grid {
+  display: grid;
+  width: 100%;
+  max-width: 1600px;
+  grid-template-columns: 18fr 14fr 23fr 26fr 17fr;
+  grid-template-rows: 280px 280px;
+  gap: 5px;
+  margin-bottom: 70px;
+}
+
+.cs-grid .cell {
+  overflow: hidden;
+}
+
+.cs-grid .cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+}
+
+/* Col 1 | Row 1 */
+.cell-street   { grid-column: 1; grid-row: 1; }
+
+/* Col 2 | Row 1 — zwei Bilder übereinander */
+.cell-stack {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cell-stack .sub          { flex: 1; overflow: hidden;}
+.cell-stack .sub img      { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 0; }
+
+/* Col 3 | Rows 1–2 — Poster volle Höhe */
+.cell-poster   { grid-column: 3; grid-row: 1 / 3; }
+
+/* Col 4 | Row 1 */
+.cell-desk     { grid-column: 4; grid-row: 1; }
+
+/* Col 5 | Row 1 */
+.cell-door     { grid-column: 5; grid-row: 1; }
+
+/* Cols 1–2 | Row 2 — breites Interior */
+.cell-interior { grid-column: 1 / 3; grid-row: 2; }
+
+/* Col 4 | Row 2 */
+.cell-coffins  { grid-column: 4; grid-row: 2; }
+
+/* Col 5 | Row 2 */
+.cell-bedroom  { grid-column: 5; grid-row: 2; }
+
+
+
+CSS MEDIA QUERY - RESPONSIVE DESIGN
+
+.cs-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 5px;
+  }
+
+  /* Alle expliziten Platzierungen zurücksetzen */
+  .cell-street,
+  .cell-desk,
+  .cell-door,
+  .cell-interior,
+  .cell-coffins,
+  .cell-bedroom,
+  .cell-poster {
+    grid-column: auto;
+    grid-row: auto;
+    height: 180px;
+  }
+
+  .cell-bedroom {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    height: 180px;
+  }
+
+  /* cell-stack "auflösen" — die zwei Sub-Bilder 
+     werden direkte Grid-Kinder */
+  .cell-stack {
+    display: contents;
+  }
+
+  .cell-stack .sub {
+    overflow: hidden;
+    background: #1a1a1a;
+    height: 180px;
+    border-radius: 0 !important;
+  }
+
+  .cell-stack .sub img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 0 !important;
+  }
+

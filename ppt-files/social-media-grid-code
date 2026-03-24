@@ -1,0 +1,177 @@
+HTML
+
+<!-- PICTURE GRID -->
+    <section class="esn-section">
+        <div class="esn-grid">
+
+            <!-- Cell 1: Video — col 1, rows 1+2 -->
+            <div class="cell cell-1">
+                <video src="pictures/Social Media/campus101.mp4" autoplay muted loop playsinline></video>
+            </div>
+
+            <!-- Cell 2: Traffic Light Party — col 2, row 1 -->
+            <div class="cell cell-2">
+                <img src="pictures/Social Media/Traffic Light Party.png" alt="Traffic Light Party">
+            </div>
+
+            <!-- Cell 3: Welcome Week — cols 3–6, row 1 -->
+            <div class="cell cell-3">
+                <img src="pictures/Social Media/Welcome Week WS2425 Email.png" alt="Welcome Week">
+            </div>
+
+            <!-- Cell 4: October Calendar — col 2, row 2 -->
+            <div class="cell cell-4">
+                <img src="pictures/Social Media/event-calendar.png" alt="October Calendar">
+            </div>
+
+            <!-- Cell 5: Video — col 3, row 2 -->
+            <div class="cell cell-5">
+                <video src="pictures/Social Media/WW-story.mp4" autoplay muted loop playsinline></video>
+            </div>
+
+            <!-- Cell 6: Halloween Party — cols 4–5, row 2 -->
+            <div class="cell cell-6">
+                <img src="pictures/Social Media/WW-PartyPoster.png" alt="Halloween Party">
+            </div>
+
+            <!-- Cell 7: Language Exchange — col 6, row 2 -->
+            <div class="cell cell-7">
+                <img src="pictures/Social Media/esncard-promo.png" alt="Language Exchange">
+            </div>
+
+            <!-- Cell 8: Welcome Party — col 1, row 3 -->
+            <div class="cell cell-8">
+                <img src="pictures/Social Media/MK-PartyPoster.png" alt="Welcome Party">
+            </div>
+
+            <!-- Cell 9: ESNcard — col 2, row 3 -->
+            <div class="cell cell-9">
+                <img src="pictures/Social Media/event-story.png" alt="ESNcard">
+            </div>
+
+            <!-- Cell 10: Video — cols 3–4, row 3 -->
+            <div class="cell cell-10">
+                <video src="pictures/Social Media/holy-fkn-airball.mp4" autoplay muted loop playsinline></video>
+            </div>
+
+            <!-- Cell 11: Dinner Post — cols 5–6, row 3 -->
+            <div class="cell cell-11">
+                <img src="pictures/Social Media/WW-post.png" alt="Dinner at Sophie's Brauhaus">
+            </div>
+
+        </div>
+    </section>
+
+CSS
+
+
+/* --- PICTURE GRID --- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.esn-section {
+    width: 100%;
+    padding: 0 5vw;
+    margin-bottom: 5vw;
+}
+
+.esn-grid {
+    display: grid;
+    grid-template-columns: 310fr 253fr 132fr 90fr 193fr 120fr;
+    grid-template-rows: 19.5vw 22vw 30vw;
+    gap: 3px;
+    width: 100%;
+}
+
+.cell {
+    overflow: hidden;
+    background: #1a1a1a;
+    position: relative;
+    min-width: 0;
+    min-height: 0;
+    cursor: pointer;
+    transition: filter 0.35s ease;
+    z-index: 1;
+}
+
+.cell img,
+.cell video {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    object-position: center center;
+    display: block;
+    margin-bottom: 0;
+    border-radius: 0;
+    transition: all 0.35s ease;
+}
+
+/* Placement */
+.cell-1  { grid-column: 1;     grid-row: 1 / 3; }
+.cell-2  { grid-column: 2;     grid-row: 1;     }
+.cell-3  { grid-column: 4 / 7; grid-row: 1;     }
+
+.cell-4  { grid-column: 2;     grid-row: 2;     }
+.cell-5  { grid-column: 3;     grid-row: 1;     }
+.cell-6  { grid-column: 3 / 5; grid-row: 2; }  /* 1 Spalte  → kleiner */
+.cell-7  { grid-column: 5 / 7; grid-row: 2; }  /* 2 Spalten → breiter */
+
+.cell-8  { grid-column: 1;     grid-row: 3;     }
+.cell-9  { grid-column: 2;     grid-row: 3;     }
+.cell-10 { grid-column: 3 / 5; grid-row: 3;     }
+.cell-11 { grid-column: 5 / 7; grid-row: 3;     }
+
+MEDIA QUERY - RESPONSIVE CSS
+
+
+    .cs-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 5px;
+    }
+
+    .cell-street,
+    .cell-desk,
+    .cell-door,
+    .cell-interior,
+    .cell-coffins,
+    .cell-bedroom,
+    .cell-poster {
+        grid-column: auto;
+        grid-row: auto;
+        height: 180px;
+    }
+
+    .cell-bedroom {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        height: 180px;
+    }
+
+    .cell-stack {
+        display: contents;
+    }
+
+    .cell-stack .sub {
+        overflow: hidden;
+        height: 180px;
+        border-radius: 0 !important;
+    }
+
+    .cell-stack .sub img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        border-radius: 0 !important;
+    }
