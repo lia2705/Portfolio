@@ -41,6 +41,7 @@ h2 {
     word-spacing: 5px; 
     font-variation-settings: "opsz" 36;
     margin: 0px;
+    color: #E0B72F;
 }
 
 h3 {
@@ -63,6 +64,7 @@ h4 {
     word-spacing: 5px;
     font-variation-settings: "opsz" 36;
     margin: 0;
+    color: #E0B72F;
 }
 
 p{
@@ -70,7 +72,7 @@ p{
     margin: 0;
     font-size: clamp(1rem, 1.2vw, 1.5rem); 
     word-spacing: 2px;
-    font-weight: 300;
+    font-weight: 350;
     line-height: 1.3;
     text-align: justify;
 }
@@ -79,20 +81,20 @@ p{
 a{
     font-family: "Work Sans", sans-serif;
     margin: 0;
+    font-weight: 350;
     font-size: clamp(0.85rem, 1.2vw, 2vw); 
 }
 
 ul{
     font-family: "Work Sans", sans-serif;
     font-size: clamp(0.85rem, 1.2vw, 1.5rem); 
-    font-weight: 300;
+    font-weight: 350;
     line-height: 1.3;
 }
 
 /* --- SHORT INFO --- */
 
 .project-name {
-    /*padding: 60px, 0px, 20px, 0px;*/
     position: relative;
     height: auto;
     padding-left: 4vw;
@@ -161,23 +163,26 @@ ul{
   grid-template-columns: auto 1fr; /* ← links: nur so breit wie nötig, rechts: Rest */
   padding: 0px;
   margin-bottom: 50px;
-  column-gap: 200px; /* ← jetzt kontrollierst du den echten Abstand */
+  column-gap: 100px; /* ← jetzt kontrollierst du den echten Abstand */
 }
 
-.stage h2, .stage h4{
+.step-header h2, .step-header h4{
     color: #E0B72F;
 }
 
-/* STEP 2, right side */
-.step2{
-    grid-template-columns: 1fr auto; /* ← umgekehrt: Text bekommt den Platz, Titel schrumpft */
-    column-gap: 60px;
+/* STEP right side */
+.step-right{
+    grid-template-columns: 1fr 320px;
+    column-gap: 100px;
+    width: auto;
 }
-.stage-right{
-    justify-self: end;   /* place the grid item to the right of its column */
-    text-align: right;   /* align text inside the item to the right edge */
-    width: 100%;
+
+.step-header-right{
+    text-align: right;
+    width: auto;
+    justify-self: auto; 
 }
+
 
 /* STEP 3*/
 .stage3 p{
@@ -195,7 +200,6 @@ ul{
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     align-items: start;
-    margin-top: 20px;
 }
 
 .stage3 img{
@@ -272,7 +276,6 @@ ul{
     text-decoration: underline;
     color: #000000;
     font-size: clamp(0.9rem, 3.5vw, 1rem);
-    font-weight: 300;
 }
 
 .bottom-nav a:hover {

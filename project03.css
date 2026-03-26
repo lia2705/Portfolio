@@ -2,7 +2,6 @@
 
 h1{
     color: #F178B6;
-     font-size: clamp(2.5rem, 100vw, 8rem);
 }
 
 h4{
@@ -13,18 +12,18 @@ header{
     background-color: #5D5FEF;
 }
 
+.name{
+     font-size: clamp(2.5rem, 100vw, 8rem) !important;
+}
+
 .project-infos-grid{
     padding: 5vw;
     gap: 5vw;
 }
 
-.stage2 {
-    text-align: right;
+ .step-header h4{
+    color: #F178B6;
 }
-
-.stage3-split{
-    margin: 0px;
-  }
 
 .shortinfo-image{
     background-color: #5D5FEF;
@@ -37,11 +36,9 @@ header{
 
 .split-image{
     border-color: #F178B6;
-    height: 100%;
-    object-fit: fit;
 }
 
-.step4{
+.step-center{
     display: flex;
     flex-direction: row;
     align-items: center;
