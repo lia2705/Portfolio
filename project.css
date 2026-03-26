@@ -423,7 +423,7 @@ ul{
         justify-self: unset;
     }
 
-     .stage2, .stage4, .stage6 {
+     .step-header-right {
         order: -1;
         text-align: left;
     }
