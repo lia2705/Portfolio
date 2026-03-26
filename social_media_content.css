@@ -29,9 +29,12 @@ img {
     border-radius: 7px;
 }
 
-.image-grid{
-    scale: 0.95;
+.image-grid video {
+    width: 100%;
+    border-radius: 0px;
+    scale: 0.9;
 }
+
 
 .bottom-nav a:hover {
     color: #5D5FEF;
