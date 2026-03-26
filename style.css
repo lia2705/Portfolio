@@ -376,17 +376,16 @@ p {
   }
 
   .about-image h2 {
-  left: 8%;
-  top: 78%;
-  right: auto;
-  width: auto;
-  max-width: none;
-  white-space: nowrap;
-  text-align: left;
-  font-size: clamp(2.2rem, 8.6vw, 3.8rem);
-  line-height: 1;
-}
-
+    left: 8%;
+    top: 78%;
+    right: auto;
+    width: auto;
+    max-width: none;
+    white-space: nowrap;
+    text-align: left;
+    font-size: clamp(2.2rem, 8.6vw, 3.8rem);
+    line-height: 1;
+  }
 
   .about-text p {
     font-size: clamp(1rem, 4.5vw, 1.2rem);
@@ -408,6 +407,10 @@ p {
   .project-card-row {
     grid-column: auto;
     height: 200px;
+  }
+
+  .project-card:hover .project-hover-overlay {
+    transform: scaleY(0);
   }
 
   .side-project {
